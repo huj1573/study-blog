@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content%}
+<p>글 제목 : {{post.title}}</p>
+<p>글 내용</p>
+{{post.content|linebreaksbr}}
+<br>
+<a href="/">돌아가기</a>
+
+{% if post.pic %}
+<img src="{{post.pic.url}}"> 
+{% endif %}
+
+{%if request.user == post.user or request.user.is_staff %}
+<a href="{%url 'update' post.id%}">수정</a>
+<a href="{%url 'delete' post.id%}">삭제</a>
+{% endif %}
+{% endblock %}
