@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% block content%}
 {% load staticfiles %}
-<img src="{%static 'imagesBQP14UZ2.png'%}">
 {% if user.is_authenticated %}
 {{user.username}}님 환영합니다.<br>
 nickname : {{user.profile.nickname}}<br>
