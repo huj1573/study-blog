@@ -12,10 +12,13 @@ region : {{user.profile.region}}<br>
     <input type="submit" value="로그아웃">
 </form>
 <a href="{%url 'create' %}">글쓰기</a>
+<center><img src="{% static 'aa.png' %}"></img></center>
 {% else %}
 
 <a href="{%url 'login' %}">로그인</a>
 <a href="{%url 'signup' %}">회원가입</a>
+
+
 
 {%endif%}
         <div class="container" style="background-color: rgb(255, 255, 255);">
